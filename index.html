@@ -6,85 +6,77 @@
   <title>Mariage Esther & Yossi</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+
+<body data-lang="fr">
   <audio id="weddingMusic" src="audio/musique.mp3" loop preload="auto"></audio>
 
-  <button class="music-toggle" id="musicToggle" type="button" aria-label="Lancer ou arrêter la musique">
-    ♫
-  </button>
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Musique">♪</button>
 
-  <main>
-    <section class="opening" id="opening">
-      <div class="opening-content">
-        <p class="intro-text">Une invitation de la part de</p>
+  <div class="language-switch" aria-label="Choix de langue">
+    <button class="lang-btn active" type="button" data-lang="fr">FR</button>
+    <button class="lang-btn" type="button" data-lang="he">HE</button>
+  </div>
 
-        <h1 class="couple-names">Esther & Yossi</h1>
+  <section class="opening" id="opening">
+    <div class="opening-content">
+      <p class="intro-text">UNE INVITATION DE LA PART DE</p>
+      <h1 class="couple-names">Esther & Yossi</h1>
 
-        <button class="envelope-button" id="openEnvelope" type="button" aria-label="Ouvrir l'invitation">
-          <img src="images/enveloppe.png" alt="Enveloppe" class="envelope-img" />
-        </button>
+      <button class="envelope-button" id="openEnvelope" type="button" aria-label="Ouvrir l’invitation">
+        <img src="images/enveloppe.png" alt="Enveloppe" class="envelope-img" />
+      </button>
 
-        <p class="open-instruction">Touchez l'enveloppe pour découvrir notre invitation</p>
-      </div>
-    </section>
+      <p class="open-instruction">Touchez l’enveloppe pour découvrir notre invitation</p>
+    </div>
+  </section>
 
-    <div class="invitation-flow" id="invitationFlow">
-      <section class="card-section first-card">
-        <article class="arch-card invitation-format">
+  <main class="invitation" id="invitation">
+    <section class="invitation-page first-page reveal-on-scroll">
+      <div class="arch-card">
+        <div class="lang-fr">
           <p class="bsd">בס״ד</p>
-
-          <p class="hebrew-quote" dir="rtl">זה היום עשה ה׳ נגילה ונשמחה בו</p>
-
-          <div class="thin-line"></div>
+          <p class="pasuk">זה היום עשה ה׳ נגילה ונשמחה בו</p>
+          <div class="tiny-separator"></div>
 
           <div class="families">
             <div>
-              <p>Mr et Mme David Cohen</p>
-              <p>Mr et Mme Daniel Benhamou</p>
-              <p>Mr et Mme Isaac Cohen</p>
+              <p>Mr. François Xavier Licari</p>
+              <p>Mme. Sandy Bellilty</p>
             </div>
-
             <div>
-              <p>Mr et Mme Aaron Lévy</p>
-              <p>Mr et Mme Moché Attal</p>
-              <p>Mr et Mme Haïm Lévy</p>
+              <p>Mr. & Mme. Jean Gorzelanzyck</p>
+              <p>Mr. & Mme. Patrick Elbaz</p>
             </div>
           </div>
 
           <p class="invite-text">
-            C’est avec l’aide infinie d’Hachem, et avec une grande émotion,
-            que nous avons la joie de vous faire part du mariage de nos enfants
+            C’est avec une immense reconnaissance envers Hashem que nous avons la joie
+            de vous faire part du mariage de nos enfants et petits-enfants
           </p>
 
-          <div class="couple-script">
-            <span class="name-wrap esther-wrap">
-              Esther
-              <span class="hebrew-name hebrew-esther" dir="rtl">אסתר</span>
-            </span>
-
-            <span class="ampersand">&</span>
-
-            <span class="name-wrap yossi-wrap">
-              Yossi
-              <span class="hebrew-name hebrew-yossi" dir="rtl">יוסי</span>
-            </span>
+          <div class="names-block">
+            <h2 class="couple-script">
+              <span class="name-wrap">Esther <span class="hebrew-name hebrew-esther">אסתר</span></span>
+              <span class="amp">&</span>
+              <span class="name-wrap">Yossi <span class="hebrew-name hebrew-yossi">יוסי</span></span>
+            </h2>
           </div>
 
-          <p class="honor-text">Et serions honorés de votre présence</p>
+          <p class="presence">Et serions honorés de votre présence</p>
 
-          <div class="date-block">
-            <p>mercredi 28 octobre 2026</p>
-            <p dir="rtl">י״ז חשון תשפ״ז</p>
-          </div>
+          <p class="date-line">mercredi 28 octobre 2026</p>
+          <p class="hebrew-date">י״ז חשון תשפ״ז</p>
 
-          <p class="ceremony-time">La Houppa débutera à 18h précises</p>
+          <p class="time-line">Kabalat Panim à 17h</p>
+          <p class="time-line">Houppa à 17h30 précises</p>
 
-          <p class="section-uppercase">SUIVIE DE LA KABALAT PANIM</p>
+          <p class="venue">SALLE SAKOYA</p>
+          <p class="city">MAALE HAHAMISHA, ISRAËL</p>
 
-          <div class="place-block">
-            <p>SALLE ORA</p>
-            <p>JÉRUSALEM, ISRAËL</p>
-          </div>
+          <p class="memory">
+            Une pensée émue pour nos grands-parents, dont la présence demeure
+            dans nos cœurs en ce jour si précieux.
+          </p>
 
           <div class="countdown" id="countdown">
             <div><span id="days">00</span><small>JOURS</small></div>
@@ -92,81 +84,138 @@
             <div><span id="minutes">00</span><small>MIN</small></div>
             <div><span id="seconds">00</span><small>SEC</small></div>
           </div>
-        </article>
-      </section>
+        </div>
 
-      <div class="logo-separator">
-        <img src="images/logo.png" alt="Esther et Yossi" />
-      </div>
+        <div class="lang-he he-content" dir="rtl">
+          <p class="bsd">בס״ד</p>
+          <p class="he-pasuk">זה היום עשה ה׳ נגילה ונשמחה בו</p>
+          <div class="tiny-separator"></div>
 
-      <section class="card-section">
-        <article class="text-card action-card">
-          <p class="script-title">Accès</p>
-
-          <p class="normal-text">
-            Retrouvez facilement le lieu de la cérémonie et ajoutez la date à votre calendrier.
-          </p>
-
-          <div class="action-buttons">
-            <a class="luxury-button" href="https://waze.com/ul?q=Salle%20Ora%20Jerusalem%20Israel" target="_blank" rel="noopener">
-              Lien Waze
-            </a>
-
-            <a class="luxury-button" id="calendarLink" href="#" target="_blank" rel="noopener">
-              Ajouter à Google Calendar
-            </a>
+          <div class="he-families">
+            <div>
+              <p>ליקרי</p>
+              <p>בלילטי</p>
+            </div>
+            <div>
+              <p>גורזלנזיק</p>
+              <p>אלבז</p>
+            </div>
           </div>
-        </article>
-      </section>
 
-      <div class="logo-separator">
-        <img src="images/logo.png" alt="Esther et Yossi" />
+          <p class="he-main-line">בשמחה רבה מתכבדים להזמינכם לחתונת ילדינו ונכדינו</p>
+
+          <h2 class="he-couple">אסתר <span>&</span> יוסי</h2>
+
+          <p class="he-small">נשמח מאוד לראותכם משתתפים בשמחתנו</p>
+
+          <div class="countdown he-countdown" id="countdownHe">
+            <div><span id="daysHe">00</span><small>ימים</small></div>
+            <div><span id="hoursHe">00</span><small>שעות</small></div>
+            <div><span id="minutesHe">00</span><small>דקות</small></div>
+            <div><span id="secondsHe">00</span><small>שניות</small></div>
+          </div>
+
+          <div class="he-date-box">
+            <p>יום רביעי, 28 באוקטובר 2026</p>
+            <p>י״ז חשון תשפ״ז</p>
+            <p>קבלת פנים בשעה 17:00</p>
+            <p>חופה בשעה 17:30 בדיוק</p>
+            <p class="he-venue-line">אולם Sakoya</p>
+            <p class="he-venue-line">מעלה החמישה, ישראל</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <section class="card-section last-section">
-        <article class="text-card rsvp-card">
-          <p class="script-title">RSVP</p>
+    <div class="logo-separator reveal-on-scroll">
+      <img src="images/logo.png" alt="Esther & Yossi" />
+    </div>
 
-          <p class="normal-text">
-            Merci de confirmer votre présence et de nous laisser un petit mot pour les mariés.
-          </p>
+    <section class="info-section reveal-on-scroll">
+      <div class="layered-card">
+        <div class="inner-panel">
+          <div class="lang-fr">
+            <p class="card-eyebrow">Lieu de réception</p>
+            <h2 class="section-title">Salle Sakoya</h2>
+            <p class="normal-text">Maale HaHamisha, Israël</p>
+            <p class="normal-text">Kabalat Panim à 17h · Houppa à 17h30 précises</p>
+
+            <div class="button-row">
+              <a class="luxury-button primary" href="https://waze.com/ul?q=Salle%20Sakoya%20Maale%20HaHamisha%20Israel" target="_blank">Ouvrir Waze</a>
+              <a class="luxury-button secondary" id="calendarLink" target="_blank">Ajouter à Google Calendar</a>
+            </div>
+          </div>
+
+          <div class="lang-he he-content" dir="rtl">
+            <p class="card-eyebrow">הגעה לאולם</p>
+            <h2 class="section-title">אולם Sakoya</h2>
+            <p class="normal-text">מעלה החמישה, ישראל</p>
+            <p class="normal-text">קבלת פנים 17:00 · חופה 17:30 בדיוק</p>
+
+            <div class="button-row">
+              <a class="luxury-button primary" href="https://waze.com/ul?q=Salle%20Sakoya%20Maale%20HaHamisha%20Israel" target="_blank">פתיחה ב-Waze</a>
+              <a class="luxury-button secondary" id="calendarLinkHe" target="_blank">הוספה ליומן</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="logo-separator reveal-on-scroll">
+      <img src="images/logo.png" alt="Esther & Yossi" />
+    </div>
+
+    <section class="info-section reveal-on-scroll">
+      <div class="layered-card">
+        <div class="inner-panel">
+          <div class="lang-fr">
+            <p class="card-eyebrow">Réponse souhaitée</p>
+            <h2 class="section-title">RSVP</h2>
+            <p class="normal-text">Merci de nous confirmer votre présence.</p>
+          </div>
+
+          <div class="lang-he he-content" dir="rtl">
+            <p class="card-eyebrow">אישור הגעה</p>
+            <h2 class="section-title">RSVP</h2>
+            <p class="normal-text">נודה לכם אם תאשרו את הגעתכם.</p>
+          </div>
 
           <form class="rsvp-form" id="rsvpForm">
-            <label>
-              Votre nom
-              <input type="text" id="guestName" placeholder="Votre nom" />
-            </label>
+            <input id="guestName" type="text" placeholder="Nom complet" required />
 
-            <label>
-              Nombre de personnes
-              <select id="guestCount">
-                <option value="1 personne">1 personne</option>
-                <option value="2 personnes">2 personnes</option>
-                <option value="3 personnes">3 personnes</option>
-                <option value="4 personnes">4 personnes</option>
-                <option value="5 personnes">5 personnes</option>
-                <option value="6 personnes">6 personnes</option>
-              </select>
-            </label>
+            <div class="attendance-choice">
+              <label>
+                <input type="radio" name="attendance" value="yes" checked />
+                <span class="lang-fr">Oui, je viens</span>
+                <span class="lang-he">כן, אגיע</span>
+              </label>
 
-            <label>
-              Un mot pour les mariés
-              <textarea id="guestMessage" rows="4" placeholder="Votre message"></textarea>
-            </label>
+              <label>
+                <input type="radio" name="attendance" value="no" />
+                <span class="lang-fr">Non, je ne pourrai pas</span>
+                <span class="lang-he">לא אוכל להגיע</span>
+              </label>
+            </div>
 
-            <button class="luxury-button rsvp-submit" type="submit">
-              Envoyer sur WhatsApp
+            <select id="guestCount">
+              <option value="1">1 personne</option>
+              <option value="2">2 personnes</option>
+              <option value="3">3 personnes</option>
+              <option value="4">4 personnes</option>
+              <option value="5">5 personnes</option>
+              <option value="6">6 personnes</option>
+            </select>
+
+            <textarea id="guestMessage" placeholder="Un mot pour les mariés"></textarea>
+
+            <button class="luxury-button primary full" type="submit">
+              <span class="lang-fr">Envoyer</span>
+              <span class="lang-he">שליחה</span>
             </button>
           </form>
-
-          <a class="whatsapp-link" href="https://wa.me/972534235534" target="_blank" rel="noopener">
-            0534235534
-          </a>
-
-          <p class="signature">Esther & Yossi</p>
-        </article>
-      </section>
-    </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
