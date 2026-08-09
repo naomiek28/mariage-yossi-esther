@@ -8,7 +8,7 @@
   --ivory: #fffaf0;
   --cream: #f8efe1;
   --champagne: #d8c6a4;
-  --shadow: rgba(52, 36, 27, 0.16);
+  --shadow: rgba(255, 244, 210, 0.35);
 }
 
 * {
@@ -254,17 +254,17 @@ body.invitation-open .invitation {
 }
 
 .bsd {
-  margin: 0 0 12px;
-  font-size: 20px;
+  margin: 0 0 10px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .pasuk {
   margin: 0;
-  font-size: 18px;
+  font-size: 23px;
   font-weight: 600;
+  line-height: 1.25;
 }
-
 .he-pasuk {
   margin: 0;
   font-family: "David Libre", "Frank Ruhl Libre", serif;
@@ -775,5 +775,53 @@ body.invitation-open .invitation {
   .reveal-on-scroll {
     animation: none;
     transition: none;
+  }
+}
+.couple-script,
+.he-couple {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+.couple-script::after,
+.he-couple::after {
+  content: "";
+  position: absolute;
+  inset: -25% -8%;
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    transparent 42%,
+    rgba(255, 255, 255, 0.18) 47%,
+    rgba(255, 250, 240, 0.42) 50%,
+    rgba(255, 255, 255, 0.18) 53%,
+    transparent 58%,
+    transparent 100%
+  );
+  mix-blend-mode: screen;
+  animation: nameLightSweep 5.5s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+@keyframes nameLightSweep {
+  0% {
+    transform: translateX(-80%);
+    opacity: 0;
+  }
+
+  22% {
+    opacity: 0.45;
+  }
+
+  48% {
+    transform: translateX(80%);
+    opacity: 0.55;
+  }
+
+  100% {
+    transform: translateX(80%);
+    opacity: 0;
   }
 }
