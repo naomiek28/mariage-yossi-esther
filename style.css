@@ -738,10 +738,10 @@ body.invitation-open .invitation {
   }
 
  .he-families {
-  gap: 48px;
-  width: calc(100% + 44px);
-  margin-left: -22px;
-  margin-right: -22px;
+  gap: 34px;
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  margin-right: -10px;
   font-size: 20px;
 }
 
