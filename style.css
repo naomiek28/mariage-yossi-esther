@@ -528,7 +528,7 @@ body.invitation-open .invitation {
 }
 
 .logo-separator {
-  min-height: 24svh;
+  min-height: 18svh;
   display: flex;
   align-items: center;
   justify-content: center;
