@@ -1,3 +1,4 @@
+const googleScriptUrl =" https://script.google.com/macros/s/AKfycbz_mwxACwjXyq5iLlEfh5QiLVjqpb72_XFSv8TB0-8Kp6vahD2ZzlSvMlFBMtFgvlWRDw/exec"
 const openEnvelope = document.getElementById("openEnvelope");
 const weddingMusic = document.getElementById("weddingMusic");
 const musicToggle = document.getElementById("musicToggle");
@@ -156,36 +157,29 @@ function handleRsvpSubmit(event) {
   const guestMessage = document.getElementById("guestMessage").value.trim();
   const attendance = document.querySelector('input[name="attendance"]:checked')?.value || "yes";
 
-  const attendanceFr =
+  const attendanceText =
     attendance === "yes"
-      ? "Oui, je serai présent(e)"
-      : "Non, je ne pourrai pas être présent(e)";
+      ? currentLang === "he" ? "כן, אגיע" : "Oui, je viens"
+      : currentLang === "he" ? "לא אוכל להגיע" : "Non, je ne pourrai pas";
 
-  const attendanceHe =
-    attendance === "yes"
-      ? "כן, אגיע"
-      : "לא אוכל להגיע";
+  const data = {
+    name: name,
+    attendance: attendanceText,
+    guestCount: guestCount,
+    message: guestMessage
+  };
 
-  let whatsappMessage = "";
+  fetch(googleScriptUrl, {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
 
-  if (currentLang === "he") {
-    whatsappMessage =
-      `שלום, אני מאשר/ת את תשובתי לחתונה של אסתר & יוסי\n` +
-      `שם: ${name}\n` +
-      `הגעה: ${attendanceHe}\n` +
-      `מספר משתתפים: ${guestCount}\n` +
-      `הודעה לזוג: ${guestMessage || "-"}`;
-  } else {
-    whatsappMessage =
-      `Bonjour, je confirme ma présence au mariage d'Esther & Yossi\n` +
-      `Nom : ${name}\n` +
-      `Présence : ${attendanceFr}\n` +
-      `Nombre de personnes : ${guestCount}\n` +
-      `Mot pour les mariés : ${guestMessage || "-"}`;
-  }
-
-  const encodedMessage = encodeURIComponent(whatsappMessage);
-  window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
+  alert("Merci, votre réponse a bien été envoyée.");
+  rsvpForm.reset();
 }
 
 if (openEnvelope) {
