@@ -535,7 +535,7 @@ body.invitation-open .invitation {
 }
 
 logo-separator img {
-  width: min(88vw, 380px);
+  width: min(54vw, 240px);
   max-width: 380px;
   height: auto;
 
