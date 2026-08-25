@@ -534,9 +534,9 @@ body.invitation-open .invitation {
   justify-content: center;
 }
 
-.logo-separator img {
-  width: min(34vw, 145px);
-  max-width: 145px;
+logo-separator img {
+  width: min(88vw, 380px);
+  max-width: 380px;
   height: auto;
 
   opacity: 1;
